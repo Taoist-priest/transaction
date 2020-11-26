@@ -7,8 +7,12 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
 
+/**
+ * @author 10207
+ */
 public class MybatisUtils {
     private static SqlSessionFactory sqlSessionFactory;
+
     static {
         try {
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(Resources.getResourceAsStream("mybatis.xml"));
@@ -16,6 +20,7 @@ public class MybatisUtils {
             e.printStackTrace();
         }
     }
+
     public static SqlSession getSqlSession(boolean autoCommit){
         return sqlSessionFactory.openSession(autoCommit);
     }

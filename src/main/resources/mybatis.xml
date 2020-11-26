@@ -3,6 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
+
     <typeAliases>
         <package name="edu.nf.transaction.entity"/>
     </typeAliases>
@@ -12,7 +13,8 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/schooldb?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8"/>
+                <property name="url"
+                          value="jdbc:mysql://localhost:3306/transactiondb?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8"/>
                 <property name="username" value="root"/>
                 <property name="password" value="root"/>
             </dataSource>
@@ -20,6 +22,7 @@
     </environments>
 
     <mappers>
+        <mapper resource="mappers/usersCreateMapper.xml"/>
         <mapper resource="mappers/usersMapper.xml"/>
     </mappers>
 </configuration>

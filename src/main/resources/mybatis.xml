@@ -23,6 +23,6 @@
 
     <mappers>
         <mapper resource="mappers/usersCreateMapper.xml"/>
-        <mapper resource="mappers/usersMapper.xml"/>
+        <mapper resource="mappers/usersInfoMapper.xml"/>
     </mappers>
 </configuration>

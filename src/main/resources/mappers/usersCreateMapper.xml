@@ -10,4 +10,7 @@
     <insert id="usersCreate" parameterType="usersCreate">
         insert into user_create(user_uuid,user_phone,user_password) values (#{userUuid},#{userPhone},#{userPassword})
     </insert>
+    <select id="usersList" resultMap="usersCreateMap">
+        select * from user_create
+    </select>
 </mapper>

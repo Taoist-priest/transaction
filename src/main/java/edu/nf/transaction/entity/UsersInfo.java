@@ -7,7 +7,7 @@ import lombok.Data;
  * @date 2020/11/26
  */
 @Data
-public class Users {
+public class UsersInfo {
     /**
      * 用户编号
      */
